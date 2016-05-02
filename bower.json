@@ -19,5 +19,8 @@
     "jquery-import-seph": "*",
     "polymer": "^1.4.0",
     "themify-import": "*"
+  },
+  "devDependencies": {
+    "kapusta-sparkline-import": "*"
   }
 }

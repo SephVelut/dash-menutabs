@@ -5,6 +5,8 @@
   <meta charset="UTF-8">
   <title>Document</title>
   <script src="./bower_components/webcomponentsjs/webcomponents.js"></script>
+  <script src="./bower_components/jquery/dist/jquery.min.js" charset="utf-8"></script>
+  <script src="./bower_components/kapusta-jquery.sparkline/dist/jquery.sparkline.min.js" charset="utf-8"></script>
 
   <link rel="import" href="./dash-menutabs.html">
 </head>
@@ -12,7 +14,6 @@
 <body>
 
   <dash-menutabs>
-
     <div data-icon="ti-menu" id="menu">
       <ul class="list-unstyled navigation mb-0">
         <li><a href="" class="bubble"><i class="ti-home"></i> Dash<span class="badge bg-danger">3</span></a></li>
@@ -113,6 +114,40 @@
         </div>
 
       </dash-menutabs>
+
+      <script>
+      $(document).ready(function() {
+        $('#sp-visitors').sparkline([191, 250, 332, 192, 420, 343, 301, 438, 177, 491], {
+          type: 'line',
+          width: '230',
+          height: '60',
+          lineColor: '#03A9F4',
+          fillColor: false,
+          lineWidth: 2,
+          spotColor: '#03A9F4',
+          minSpotColor: '#03A9F4',
+          maxSpotColor: '#03A9F4',
+          highlightSpotColor: '#F9CE1D',
+          highlightLineColor: '#F9CE1D',
+          spotRadius: 4
+        });
+
+        $('#sp-revenue').sparkline([741, 901, 758, 776, 897, 801, 633, 801, 722, 773], {
+          type: 'line',
+          width: '230',
+          height: '60',
+          lineColor: '#03A9F4',
+          fillColor: false,
+          lineWidth: 2,
+          spotColor: '#03A9F4',
+          minSpotColor: '#03A9F4',
+          maxSpotColor: '#03A9F4',
+          highlightSpotColor: '#F9CE1D',
+          highlightLineColor: '#F9CE1D',
+          spotRadius: 4
+        });
+      });
+      </script>
 
     </body>
 
