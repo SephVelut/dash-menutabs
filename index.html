@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script src="./bower_components/webcomponentsjs/webcomponents.js"></script>
+
+  <link rel="import" href="./dash-menutabs.html">
+</head>
+
+<body>
+
+  <dash-menutabs>
+
+    <div data-icon="ti-menu" id="menu">
+      <ul class="list-unstyled navigation mb-0">
+        <li><a href="" class="bubble"><i class="ti-home"></i> Dash<span class="badge bg-danger">3</span></a></li>
+        <li class="header">Stats</li>
+        <li class="panel"><a role="button" data-toggle="collapse" data-parent=".navigation" href="#collapse0" aria-expanded="false" aria-controls="collapse0" class="collapsed"><i class="ti-bar-chart"></i> Productions</a>
+          <ul id="collapse0" class="list-unstyled collapse">
+            <li><a href="">Grids</a></li>
+            <li><a href="">Charts</a></li>
+            <li><a href="">Queries</a></li>
+          </ul>
+        </li>
+        <li><a href=""><i class="ti-dashboard"></i> Goals</a></li>
+        <li class="header">Call Centre</li>
+        <li><a><i class="ti-headphone-alt"></i> Dialer</a></li>
+        <li><a href=""><i class="ti-github"></i> VeifierBot</a></li>
+        <li class="header">Help</li>
+        <li><a href=""><i class="ti-help-alt"></i> Documentation</a></li>
+      </ul>
+    </div>
+
+    <div data-icon="ti-user" id="portfolio">
+      <div class="header">Performance</div>
+      <div class="rating clearfix">
+        <div class="pull-left score bg-black fs-24 fw-600 text-center">4/H</div>
+        <div class="pull-left">
+          <div class="progress">
+            <div style="width: 100%" role="progressbar" data-transitiongoal="100" class="progress-bar five-star"></div>
+          </div>
+          <div class="progress">
+            <div style="width: 80%" role="progressbar" data-transitiongoal="80" class="progress-bar four-star"></div>
+          </div>
+          <div class="progress">
+            <div style="width: 10%" role="progressbar" data-transitiongoal="10" class="progress-bar three-star"></div>
+          </div>
+          <div class="progress">
+            <div style="width: 25%" role="progressbar" data-transitiongoal="25" class="progress-bar two-star"></div>
+          </div>
+          <div class="progress">
+            <div style="width: 5%" role="progressbar" data-transitiongoal="5" class="progress-bar one-star"></div>
+          </div>
+        </div>
+      </div>
+      <p class="text-center fs-12 mt-5 mb-0">based on weekly leads per hour</p>
+      <div class="header">Competition</div>
+      <div class="followers"><img src="" alt="" class="img-circle"><img src="" alt="" class="img-circle"><img src="" alt="" class="img-circle"><a href="#" class="more img-circle text-center fs-24 fw-600 text-info">+</a></div>
+      <p class="text-center fs-12 mt-5 mb-0">in the top 10</p>
+      <div class="header">My productions today</div>
+      <div id="sp-visitors"></div>
+      <p class="text-center fs-12 mt-5 mb-0">Keeping up above average</p>
+      <div class="header">Team's productions today</div>
+      <div id="sp-revenue"></div>
+      <p class="text-center fs-12 mt-5 mb-0">Breaking new records</p>
+      <div class="header">Your Blog Posts</div>
+      <ul class="posts media-list">
+        <li class="media">
+          <div class="media-left">
+            <a href="#" class="inline-block"><img src="" alt="" class="media-object mo-lg"></a>
+          </div>
+          <div class="media-body media-middle">
+            <a href="#">
+              <h6 class="media-heading text-muted">10 tips to help the new guys out</h6></a>
+              <time datetime="2015-09-14T14:28:26+07:00" class="fs-11">May 14, 2016</time>
+            </div>
+          </li>
+          <li class="media">
+            <div class="media-left">
+              <a href="#" class="inline-block"><img src="" alt="" class="media-object mo-lg"></a>
+            </div>
+            <div class="media-body media-middle">
+              <a href="#">
+                <h6 class="media-heading text-muted">How to improve your rebuttals</h6></a>
+                <time datetime="2015-10-10T20:27:48+07:00" class="fs-11">May 10, 2016</time>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div data-icon="ti-bar-chart" id="email">
+          <button type="button" data-toggle="modal" data-target=".compose-mail-modal" class="btn btn-raised btn-block btn-danger mt-10"><i class="ti-pencil-alt"></i> Compose Mail</button>
+          <ul class="list-unstyled navigation mb-0">
+            <li class="header">Email</li>
+            <li><a href="" class="bubble"><i class="ti-archive"></i> Inbox<span class="badge bg-danger">5</span></a></li>
+            <li><a href=""><i class="ti-location-arrow"></i> Sent</a></li>
+            <li><a href=""><i class="ti-notepad"></i> Draft</a></li>
+            <li><a href=""><i class="ti-trash"></i> Trash</a></li>
+            <li><a href=""><i class="ti-flag-alt"></i> Important</a></li>
+            <li><a href=""><i class="ti-star"></i> Starred</a></li>
+            <li class="header">Folders</li>
+            <li><a href="#"><i class="ti-folder"></i> Newsletter</a></li>
+            <li><a href="#"><i class="ti-folder"></i> Friend</a></li>
+            <li><a href="#"><i class="ti-folder"></i> Company</a></li>
+            <li><a href="#"><i class="ti-folder"></i> Downloaded</a></li>
+          </ul>
+        </div>
+
+        <div data-icon="ti-dashboard" id="setting">
+          <div class="header">Call Centre health</div>
+        </div>
+
+      </dash-menutabs>
+
+    </body>
+
+    </html>

@@ -1,0 +1,70 @@
+<link rel="import" href="../polymer/polymer.html">
+
+<link rel="import" href="../jquery-import-seph/jquery.html">
+<link rel="import" href="../bootstrap-import/bootstrap.html">
+<link rel="import" href="../themify-import/themify-icons.html">
+
+<link rel="stylesheet" href="umega.css">
+
+<dom-module id="dash-menutabs">
+  <template>
+    <ul role="tablist" class="nav nav-tabs nav-justified nav-sidebar">
+      <template is="dom-repeat" items="{{getContentPanes()}}">
+        <template is="dom-if" if="{{isFirstIndex(index)}}">
+          <li role="presentation" class="active">
+            <a href="#menu" aria-controls="menu" role="tab" data-toggle="tab">
+              <i class$="{{item.dataset.icon}}"></i>
+            </a>
+          </li>
+        </template>
+
+        <template is="dom-if" if="{{!isFirstIndex(index)}}">
+          <li role="presentation">
+            <a href$="#{{item.id}}" aria-controls="menu" role="tab" data-toggle="tab">
+              <i class$="{{item.dataset.icon}}"></i>
+            </a>
+          </li>
+        </template>
+      </template>
+    </ul>
+
+    <div class="tab-content nav-sidebar-content">
+      <content select="div"></content>
+    </div>
+  </template>
+
+  <script>
+  Polymer({
+    is: 'dash-menutabs',
+
+    attached: function() {
+      var panes = this.getContentPanes();
+
+      panes.map(function(pane, index){
+        Polymer.dom(pane).setAttribute('role', "tabpanel");
+
+        if(index == 0) {
+          Polymer.dom(pane).setAttribute('class', "tab-pane fade in active");
+        } else {
+          Polymer.dom(pane).setAttribute('class', "tab-pane fade");
+        }
+      });
+    },
+
+    isFirstIndex: function(index) {
+      if(index == 0) {
+        return true;
+      } else {
+        return false;
+      }
+    },
+
+    getContentPanes: function() {
+      var insertionPoint = Polymer.dom(this.root).querySelector('content');
+      var distributed = Polymer.dom(insertionPoint).getDistributedNodes();
+
+      return distributed;
+    }
+  });
+  </script>
+</dom-module>

@@ -1,0 +1,23 @@
+{
+  "name": "dash-menutabs",
+  "authors": [
+    "seph <sephvelut@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-import": "*",
+    "jquery-import-seph": "*",
+    "polymer": "^1.4.0",
+    "themify-import": "*"
+  }
+}
